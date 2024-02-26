@@ -1,0 +1,11 @@
+package Test;
+
+import dao.UserDAO2;
+import model.User;
+
+public class TestUser {
+	public static void main(String[] args) {
+		User u1 = new User("u1","u123","UUU");
+		UserDAO2.getInstance().insert(u1);
+	}
+}

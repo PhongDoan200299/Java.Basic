@@ -1,0 +1,30 @@
+package test;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+
+import dao.KhachHangDAO;
+import model.khachHang;
+
+public class TestKhachHangDAO {
+	public static void main(String[] args) {
+		SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+	
+		
+		
+			try {
+				khachHang khachHang1 = new khachHang(0, "HoChiMinh", dateFormat.parse("1-1-2001"), "Hà Nội");
+				if(KhachHangDAO.getInstance().insert(khachHang1) > 0 ) {
+					System.out.print("update thanh cong");
+				}else {
+					System.out.print("update that bai");
+				}
+			
+			} catch (ParseException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+		
+	}
+}

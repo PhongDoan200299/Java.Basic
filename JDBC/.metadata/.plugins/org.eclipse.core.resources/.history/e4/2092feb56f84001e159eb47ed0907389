@@ -1,0 +1,21 @@
+package Test;
+
+import java.util.ArrayList;
+
+import dao.UserDAO2;
+import model.User;
+
+public class TestUser {
+	public static void main(String[] args) {
+		User u1 = new User("u1","u123","UUU");
+		UserDAO2.getInstance().insert(u1);
+		
+		
+		//
+		User u_find = new User("u1","u123","UUU");
+		ArrayList<User> list3 = UserDAO2.getInstance().selectById(u_find);
+		for (User user : list3) {
+			System.out.println(user.toString());
+		}
+	}
+}

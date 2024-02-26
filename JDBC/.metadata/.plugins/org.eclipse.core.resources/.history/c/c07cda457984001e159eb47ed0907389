@@ -1,0 +1,23 @@
+package Test;
+
+import java.util.ArrayList;
+
+import dao.UserDAO2;
+import model.User;
+
+public class TestUser {
+	public static void main(String[] args) {
+//		User u3 = new User("u3","u123","UUU");
+//		UserDAO2.getInstance().insert(u3);
+		
+		//
+		System.out.println("---------------");
+		User u_find = new User("u1","u123","UUU");
+		User u_result = UserDAO2.getInstance().selectById(u_find);
+		System.out.println(u_result);
+		
+//		User u_find = new User("x\' or 1=1; -- ","","");
+//		User u_result = UserDAO2.getInstance().selectById(u_find);
+//		System.out.println(u_result);
+	}
+}
